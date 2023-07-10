@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.io chat app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="overlay">
+      <form class="starter-form" id="form" ">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div>
+          <label for="room">Room</label>
+          <input type="text" name="room" id="room" />
+        </div>
+        <button id="enter-btn" type="submit">Enter</button>
+      </form>
+    </div>
+    <div class="chat" id="chat">
+      <h1 class="chatly" id="chatly">Chatly<span  style='font-size:14px;' id="total-users"></span></h1>
+        <ul class="messages" id="messages">          
+        </ul>
+        <div class="send-box" id="send-box">
+            <input type="text" class="message-input" id="send-box-input" placeholder="message..."/>
+            <button class="send-btn" id="send-box-button">Send</button>
+        </div>
+    </div>
+  </body>
+</html>
